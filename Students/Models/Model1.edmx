@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Praksa_Nov_2019Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Profesor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Student_Pelka">
+          <Key>
+            <PropertyRef Name="ID_studenta" />
+          </Key>
+          <Property Name="ID_studenta" Type="int" Nullable="false" />
+          <Property Name="Ime" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Prezime" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Adresa" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Telefon" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Datum_rodjenja" Type="date" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Praksa_Nov_2019.dbo.Table1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Table1">
+          <Property Name="id" Type="nchar" MaxLength="10" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Praksa_Nov_2019.dbo.Test' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Test">
+          <Property Name="Test" Type="nchar" MaxLength="10" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7PelkaRacunari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.VjezbaSrdjan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.OcjeneIspitnihObavezaStudenata_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.OcjeneIspitnihObavezaStudenata_Pelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.OcjeneIspitnihObavezaStudenataNata' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.OcjeneIspitnihObavezaStudenataSrdjan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba 19' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba 19 - ocjene studenata' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba17_Pelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba17_View_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba17drugi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba19_View_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba20Pelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7_Employee_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7_Racunari_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7EmployeePelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7RacunariPelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="InsertZaduzenjaNata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPredmeta" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="IdProfesora" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="IdAsistenta" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="InsertZaduzenjaSaTryCatchNata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPredmeta" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="IdProfesora" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="IdAsistenta" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="TryCatchPelka" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDPredmeta" Type="int" Mode="In" />
+          <Parameter Name="IDProfesora" Type="int" Mode="In" />
+          <Parameter Name="Zaduzenje" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="UnosProfesora_Dragana" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDPredmeta" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="IDProfesora" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="Zaduzenje" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="UnosProfesora_Dragana_try_catch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDPredmeta" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="IDProfesora" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="Zaduzenje" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="ZaduzenjeProfesoraProcedura" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDPredmeta" Type="int" Mode="In" />
+          <Parameter Name="IDProfesora" Type="int" Mode="In" />
+          <Parameter Name="Asistenta" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="Praksa_Nov_2019ModelStoreContainer">
+          <EntitySet Name="Student_Pelka" EntityType="Self.Student_Pelka" Schema="dbo" store:Type="Tables" />
+          </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Praksa_Nov_2019Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Student_Pelka">
+          <Key>
+            <PropertyRef Name="ID_studenta" />
+          </Key>
+          <Property Name="ID_studenta" Type="Int32" Nullable="false" />
+          <Property Name="Ime" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Prezime" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Adresa" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Datum_rodjenja" Type="DateTime" Nullable="false" Precision="0" />
+          </EntityType>
+        <EntityContainer Name="Praksa_Nov_2019Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Student_Pelka" EntityType="Self.Student_Pelka" />
+          <FunctionImport Name="InsertZaduzenjaNata">
+            <Parameter Name="IdPredmeta" Mode="In" Type="Guid" />
+            <Parameter Name="IdProfesora" Mode="In" Type="Guid" />
+            <Parameter Name="IdAsistenta" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="InsertZaduzenjaSaTryCatchNata" ReturnType="Collection(Praksa_Nov_2019Model.InsertZaduzenjaSaTryCatchNata_Result)">
+            <Parameter Name="IdPredmeta" Mode="In" Type="Guid" />
+            <Parameter Name="IdProfesora" Mode="In" Type="Guid" />
+            <Parameter Name="IdAsistenta" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Praksa_Nov_2019Model.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Praksa_Nov_2019Model.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="TryCatchPelka" ReturnType="Collection(String)">
+            <Parameter Name="IDPredmeta" Mode="In" Type="Int32" />
+            <Parameter Name="IDProfesora" Mode="In" Type="Int32" />
+            <Parameter Name="Zaduzenje" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UnosProfesora_Dragana">
+            <Parameter Name="IDPredmeta" Mode="In" Type="Guid" />
+            <Parameter Name="IDProfesora" Mode="In" Type="Guid" />
+            <Parameter Name="Zaduzenje" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UnosProfesora_Dragana_try_catch" ReturnType="Collection(String)">
+            <Parameter Name="IDPredmeta" Mode="In" Type="Guid" />
+            <Parameter Name="IDProfesora" Mode="In" Type="Guid" />
+            <Parameter Name="Zaduzenje" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ZaduzenjeProfesoraProcedura">
+            <Parameter Name="IDPredmeta" Mode="In" Type="Int32" />
+            <Parameter Name="IDProfesora" Mode="In" Type="Int32" />
+            <Parameter Name="Asistenta" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="InsertZaduzenjaSaTryCatchNata_Result">
+          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Zaduzenje" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ime" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Prezime" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Praksa_Nov_2019ModelStoreContainer" CdmEntityContainer="Praksa_Nov_2019Entities">
+          <EntitySetMapping Name="Student_Pelka">
+            <EntityTypeMapping TypeName="Praksa_Nov_2019Model.Student_Pelka">
+              <MappingFragment StoreEntitySet="Student_Pelka">
+                <ScalarProperty Name="ID_studenta" ColumnName="ID_studenta" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+                <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Datum_rodjenja" ColumnName="Datum_rodjenja" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="InsertZaduzenjaNata" FunctionName="Praksa_Nov_2019Model.Store.InsertZaduzenjaNata" />
+          <FunctionImportMapping FunctionImportName="InsertZaduzenjaSaTryCatchNata" FunctionName="Praksa_Nov_2019Model.Store.InsertZaduzenjaSaTryCatchNata">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Praksa_Nov_2019Model.InsertZaduzenjaSaTryCatchNata_Result">
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="Zaduzenje" ColumnName="Zaduzenje" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Praksa_Nov_2019Model.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Praksa_Nov_2019Model.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Praksa_Nov_2019Model.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Praksa_Nov_2019Model.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Praksa_Nov_2019Model.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Praksa_Nov_2019Model.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Praksa_Nov_2019Model.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Praksa_Nov_2019Model.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Praksa_Nov_2019Model.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="TryCatchPelka" FunctionName="Praksa_Nov_2019Model.Store.TryCatchPelka" />
+          <FunctionImportMapping FunctionImportName="UnosProfesora_Dragana" FunctionName="Praksa_Nov_2019Model.Store.UnosProfesora_Dragana" />
+          <FunctionImportMapping FunctionImportName="UnosProfesora_Dragana_try_catch" FunctionName="Praksa_Nov_2019Model.Store.UnosProfesora_Dragana_try_catch" />
+          <FunctionImportMapping FunctionImportName="ZaduzenjeProfesoraProcedura" FunctionName="Praksa_Nov_2019Model.Store.ZaduzenjeProfesoraProcedura" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
