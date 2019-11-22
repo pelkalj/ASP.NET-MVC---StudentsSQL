@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Praksa_Nov_2019ModelStoreContainer" CdmEntityContainer="Praksa_Nov_2019Entities">
+    <EntitySetMapping Name="Student_Pelka">
+      <EntityTypeMapping TypeName="Praksa_Nov_2019Model.Student_Pelka">
+        <MappingFragment StoreEntitySet="Student_Pelka">
+          <ScalarProperty Name="ID_studenta" ColumnName="ID_studenta" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Datum_rodjenja" ColumnName="Datum_rodjenja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="InsertZaduzenjaNata" FunctionName="Praksa_Nov_2019Model.Store.InsertZaduzenjaNata" />
+    <FunctionImportMapping FunctionImportName="InsertZaduzenjaSaTryCatchNata" FunctionName="Praksa_Nov_2019Model.Store.InsertZaduzenjaSaTryCatchNata">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Praksa_Nov_2019Model.InsertZaduzenjaSaTryCatchNata_Result">
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Zaduzenje" ColumnName="Zaduzenje" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Praksa_Nov_2019Model.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Praksa_Nov_2019Model.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Praksa_Nov_2019Model.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Praksa_Nov_2019Model.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Praksa_Nov_2019Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Praksa_Nov_2019Model.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Praksa_Nov_2019Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Praksa_Nov_2019Model.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Praksa_Nov_2019Model.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="TryCatchPelka" FunctionName="Praksa_Nov_2019Model.Store.TryCatchPelka" />
+    <FunctionImportMapping FunctionImportName="UnosProfesora_Dragana" FunctionName="Praksa_Nov_2019Model.Store.UnosProfesora_Dragana" />
+    <FunctionImportMapping FunctionImportName="UnosProfesora_Dragana_try_catch" FunctionName="Praksa_Nov_2019Model.Store.UnosProfesora_Dragana_try_catch" />
+    <FunctionImportMapping FunctionImportName="ZaduzenjeProfesoraProcedura" FunctionName="Praksa_Nov_2019Model.Store.ZaduzenjeProfesoraProcedura" />
+  </EntityContainerMapping>
+</Mapping>

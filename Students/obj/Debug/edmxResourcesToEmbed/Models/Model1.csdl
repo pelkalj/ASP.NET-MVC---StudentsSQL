@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Praksa_Nov_2019Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Student_Pelka">
+    <Key>
+      <PropertyRef Name="ID_studenta" />
+    </Key>
+    <Property Name="ID_studenta" Type="Int32" Nullable="false" />
+    <Property Name="Ime" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Prezime" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Adresa" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Datum_rodjenja" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="Praksa_Nov_2019Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Student_Pelka" EntityType="Self.Student_Pelka" />
+    <FunctionImport Name="InsertZaduzenjaNata">
+      <Parameter Name="IdPredmeta" Mode="In" Type="Guid" />
+      <Parameter Name="IdProfesora" Mode="In" Type="Guid" />
+      <Parameter Name="IdAsistenta" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="InsertZaduzenjaSaTryCatchNata" ReturnType="Collection(Praksa_Nov_2019Model.InsertZaduzenjaSaTryCatchNata_Result)">
+      <Parameter Name="IdPredmeta" Mode="In" Type="Guid" />
+      <Parameter Name="IdProfesora" Mode="In" Type="Guid" />
+      <Parameter Name="IdAsistenta" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Praksa_Nov_2019Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Praksa_Nov_2019Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="TryCatchPelka" ReturnType="Collection(String)">
+      <Parameter Name="IDPredmeta" Mode="In" Type="Int32" />
+      <Parameter Name="IDProfesora" Mode="In" Type="Int32" />
+      <Parameter Name="Zaduzenje" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UnosProfesora_Dragana">
+      <Parameter Name="IDPredmeta" Mode="In" Type="Guid" />
+      <Parameter Name="IDProfesora" Mode="In" Type="Guid" />
+      <Parameter Name="Zaduzenje" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UnosProfesora_Dragana_try_catch" ReturnType="Collection(String)">
+      <Parameter Name="IDPredmeta" Mode="In" Type="Guid" />
+      <Parameter Name="IDProfesora" Mode="In" Type="Guid" />
+      <Parameter Name="Zaduzenje" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ZaduzenjeProfesoraProcedura">
+      <Parameter Name="IDPredmeta" Mode="In" Type="Int32" />
+      <Parameter Name="IDProfesora" Mode="In" Type="Int32" />
+      <Parameter Name="Asistenta" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="InsertZaduzenjaSaTryCatchNata_Result">
+    <Property Type="String" Name="Naziv" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Zaduzenje" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ime" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

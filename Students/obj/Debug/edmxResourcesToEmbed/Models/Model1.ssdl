@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Praksa_Nov_2019Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Profesor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Student_Pelka">
+    <Key>
+      <PropertyRef Name="ID_studenta" />
+    </Key>
+    <Property Name="ID_studenta" Type="int" Nullable="false" />
+    <Property Name="Ime" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Prezime" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="Adresa" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telefon" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Datum_rodjenja" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Praksa_Nov_2019.dbo.Table1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Table1">
+          <Property Name="id" Type="nchar" MaxLength="10" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Praksa_Nov_2019.dbo.Test' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Test">
+          <Property Name="Test" Type="nchar" MaxLength="10" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7PelkaRacunari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.VjezbaSrdjan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.OcjeneIspitnihObavezaStudenata_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.OcjeneIspitnihObavezaStudenata_Pelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.OcjeneIspitnihObavezaStudenataNata' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.OcjeneIspitnihObavezaStudenataSrdjan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba 19' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba 19 - ocjene studenata' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba17_Pelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba17_View_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba17drugi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba19_View_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba20Pelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7_Employee_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7_Racunari_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7EmployeePelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7RacunariPelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="InsertZaduzenjaNata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPredmeta" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IdProfesora" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IdAsistenta" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="InsertZaduzenjaSaTryCatchNata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPredmeta" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IdProfesora" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IdAsistenta" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="TryCatchPelka" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPredmeta" Type="int" Mode="In" />
+    <Parameter Name="IDProfesora" Type="int" Mode="In" />
+    <Parameter Name="Zaduzenje" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UnosProfesora_Dragana" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPredmeta" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDProfesora" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Zaduzenje" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="UnosProfesora_Dragana_try_catch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPredmeta" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDProfesora" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Zaduzenje" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="ZaduzenjeProfesoraProcedura" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPredmeta" Type="int" Mode="In" />
+    <Parameter Name="IDProfesora" Type="int" Mode="In" />
+    <Parameter Name="Asistenta" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="Praksa_Nov_2019ModelStoreContainer">
+    <EntitySet Name="Student_Pelka" EntityType="Self.Student_Pelka" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
