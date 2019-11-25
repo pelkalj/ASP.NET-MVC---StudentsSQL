@@ -70,7 +70,7 @@ namespace Students.Controllers
         public ActionResult Edit ( int id) 
         {
                 Praksa_Nov_2019Entities db = new Praksa_Nov_2019Entities();
-                Student_Pelka student = db.Student_Pelka.SingleOrDefault(s => s.ID_studenta == id);
+                Student_Pelka student = db.Student_Pelka.Where(s => s.ID_studenta == id).SingleOrDefault();
                 return View(student);
            
         }
@@ -83,13 +83,13 @@ namespace Students.Controllers
                 using (db)
                 { 
 
-                    var student_to_update = db.Student_Pelka.SingleOrDefault(s => s.ID_studenta == student.ID_studenta);
+                    var studenUpdate = db.Student_Pelka.Where(s => s.ID_studenta == student.ID_studenta).SingleOrDefault();
 
-                    student_to_update.Ime = student.Ime;
-                    student_to_update.Prezime = student.Prezime;
-                    student_to_update.Adresa = student.Adresa;
-                    student_to_update.Telefon = student.Telefon;
-                    student_to_update.Datum_rodjenja = student.Datum_rodjenja;
+                    studenUpdate.Ime = student.Ime;
+                    studenUpdate.Prezime = student.Prezime;
+                    studenUpdate.Adresa = student.Adresa;
+                    studenUpdate.Telefon = student.Telefon;
+                    studenUpdate.Datum_rodjenja = student.Datum_rodjenja;
                     db.SaveChanges();
                     
                 }
@@ -106,7 +106,7 @@ namespace Students.Controllers
 
             Praksa_Nov_2019Entities db = new Praksa_Nov_2019Entities();
 
-            var student = db.Student_Pelka.Single(s => s.ID_studenta == id);
+            var student = db.Student_Pelka.SingleOrDefault(s => s.ID_studenta == id);
 
 
             return View(student);
@@ -115,30 +115,32 @@ namespace Students.Controllers
 
 
 
-        public ActionResult Delete (int id)
+        public ActionResult Delete (string id)
         {
-
-            var deleteStudent = db.Student_Pelka.Find(id);
-            return View(deleteStudent);
-
+            int studentId = Convert.ToInt32(id);
+            using (db)
+            {
+                var deleteStudent = db.Student_Pelka.Where(s => s.ID_studenta == studentId).FirstOrDefault();
+                return View(deleteStudent);
+            }
 
         }
 
         [HttpPost]
-        public ActionResult Delete (Student_Pelka student)
+        public ActionResult Delete (int id)
         {
             using (db)
             {
 
-                var deleteStudent = db.Student_Pelka.Find(student.ID_studenta);
-                db.Student_Pelka.Remove(deleteStudent);
+              
+                db.Student_Pelka.Remove(db.Student_Pelka.Find(id));
                 db.SaveChanges();
-                return RedirectToAction("Index");
+               
                 
-            }
+            } return RedirectToAction("Index");
 
 
-        }
+        } 
 
     }
 }

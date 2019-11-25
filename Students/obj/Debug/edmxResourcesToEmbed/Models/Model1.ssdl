@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Praksa_Nov_2019Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Profesor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Ocjena_Pelka">
+    <Key>
+      <PropertyRef Name="ID_studenta" />
+    </Key>
+    <Property Name="ID_studenta" Type="int" Nullable="false" />
+    <Property Name="ID_ispitnaObaveza" Type="int" Nullable="false" />
+    <Property Name="Ocjena" Type="int" />
+  </EntityType>
   <EntityType Name="Student_Pelka">
     <Key>
       <PropertyRef Name="ID_studenta" />
@@ -13,50 +19,38 @@ warning 6002: The table/view 'Praksa_Nov_2019.dbo.Profesor' does not have a prim
     <Property Name="Telefon" Type="nchar" MaxLength="20" Nullable="false" />
     <Property Name="Datum_rodjenja" Type="date" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'Praksa_Nov_2019.dbo.Table1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="Table1">
-          <Property Name="id" Type="nchar" MaxLength="10" />
-        </EntityType>-->
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'Praksa_Nov_2019.dbo.Test' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="Test">
-          <Property Name="Test" Type="nchar" MaxLength="10" />
-        </EntityType>-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7PelkaRacunari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.VjezbaSrdjan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.OcjeneIspitnihObavezaStudenata_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.OcjeneIspitnihObavezaStudenata_Pelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.OcjeneIspitnihObavezaStudenataNata' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.OcjeneIspitnihObavezaStudenataSrdjan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba 19' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba 19 - ocjene studenata' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba17_Pelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba17_View_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba17drugi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba19_View_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba20Pelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7_Employee_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7_Racunari_Dragana' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7EmployeePelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7RacunariPelka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="UpisStudenataNaPredmet_Pelka">
+    <Key>
+      <PropertyRef Name="ID_studenta" />
+    </Key>
+    <Property Name="ID_studenta" Type="int" Nullable="false" />
+    <Property Name="ID_predavanja" Type="int" Nullable="false" />
+    <Property Name="Ocjena" Type="int" />
+  </EntityType>
+  <Association Name="FK_Ocjena_Pelka_Student_Pelka">
+    <End Role="Student_Pelka" Type="Self.Student_Pelka" Multiplicity="1" />
+    <End Role="Ocjena_Pelka" Type="Self.Ocjena_Pelka" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Student_Pelka">
+        <PropertyRef Name="ID_studenta" />
+      </Principal>
+      <Dependent Role="Ocjena_Pelka">
+        <PropertyRef Name="ID_studenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UpisStudenataNaPredmet_Pelka_Student_Pelka1">
+    <End Role="Student_Pelka" Type="Self.Student_Pelka" Multiplicity="1" />
+    <End Role="UpisStudenataNaPredmet_Pelka" Type="Self.UpisStudenataNaPredmet_Pelka" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Student_Pelka">
+        <PropertyRef Name="ID_studenta" />
+      </Principal>
+      <Dependent Role="UpisStudenataNaPredmet_Pelka">
+        <PropertyRef Name="ID_studenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="InsertZaduzenjaNata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="IdPredmeta" Type="uniqueidentifier" Mode="In" />
@@ -119,6 +113,16 @@ warning 6002: The table/view 'Praksa_Nov_2019.dbo.Vjezba7RacunariPelka' does not
     <Parameter Name="Asistenta" Type="int" Mode="In" />
   </Function>
   <EntityContainer Name="Praksa_Nov_2019ModelStoreContainer">
+    <EntitySet Name="Ocjena_Pelka" EntityType="Self.Ocjena_Pelka" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Student_Pelka" EntityType="Self.Student_Pelka" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UpisStudenataNaPredmet_Pelka" EntityType="Self.UpisStudenataNaPredmet_Pelka" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Ocjena_Pelka_Student_Pelka" Association="Self.FK_Ocjena_Pelka_Student_Pelka">
+      <End Role="Student_Pelka" EntitySet="Student_Pelka" />
+      <End Role="Ocjena_Pelka" EntitySet="Ocjena_Pelka" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UpisStudenataNaPredmet_Pelka_Student_Pelka1" Association="Self.FK_UpisStudenataNaPredmet_Pelka_Student_Pelka1">
+      <End Role="Student_Pelka" EntitySet="Student_Pelka" />
+      <End Role="UpisStudenataNaPredmet_Pelka" EntitySet="UpisStudenataNaPredmet_Pelka" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -10,18 +10,12 @@
 namespace Students.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Student_Pelka
+    public partial class InsertZaduzenjaSaTryCatchNata_Result
     {
-        public int ID_studenta { get; set; }
+        public string Naziv { get; set; }
+        public string Zaduzenje { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public string Adresa { get; set; }
-        public string Telefon { get; set; }
-        public System.DateTime Datum_rodjenja { get; set; }
-    
-        public virtual Ocjena_Pelka Ocjena_Pelka { get; set; }
-        public virtual UpisStudenataNaPredmet_Pelka UpisStudenataNaPredmet_Pelka { get; set; }
     }
 }

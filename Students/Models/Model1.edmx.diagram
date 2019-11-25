@@ -6,6 +6,10 @@
     <edmx:Diagrams>
       <Diagram DiagramId="88d22231a8bd4447aadca027303b258b" Name="Diagram1">
         <EntityTypeShape EntityType="Praksa_Nov_2019Model.Student_Pelka" Width="1.5" PointX="17" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Praksa_Nov_2019Model.Ocjena_Pelka" Width="1.5" PointX="13.875" PointY="3.125" />
+        <EntityTypeShape EntityType="Praksa_Nov_2019Model.UpisStudenataNaPredmet_Pelka" Width="1.5" PointX="13.875" PointY="5.625" />
+        <AssociationConnector Association="Praksa_Nov_2019Model.FK_Ocjena_Pelka_Student_Pelka" />
+        <AssociationConnector Association="Praksa_Nov_2019Model.FK_UpisStudenataNaPredmet_Pelka_Student_Pelka1" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

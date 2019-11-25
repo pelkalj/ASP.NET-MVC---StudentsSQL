@@ -12,16 +12,12 @@ namespace Students.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Student_Pelka
+    public partial class UpisStudenataNaPredmet_Pelka
     {
         public int ID_studenta { get; set; }
-        public string Ime { get; set; }
-        public string Prezime { get; set; }
-        public string Adresa { get; set; }
-        public string Telefon { get; set; }
-        public System.DateTime Datum_rodjenja { get; set; }
+        public int ID_predavanja { get; set; }
+        public Nullable<int> Ocjena { get; set; }
     
-        public virtual Ocjena_Pelka Ocjena_Pelka { get; set; }
-        public virtual UpisStudenataNaPredmet_Pelka UpisStudenataNaPredmet_Pelka { get; set; }
+        public virtual Student_Pelka Student_Pelka { get; set; }
     }
 }

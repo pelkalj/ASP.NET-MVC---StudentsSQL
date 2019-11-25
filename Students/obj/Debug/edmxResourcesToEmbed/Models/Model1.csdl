@@ -10,6 +10,8 @@
     <Property Name="Adresa" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="Datum_rodjenja" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Ocjena_Pelka" Relationship="Praksa_Nov_2019Model.FK_Ocjena_Pelka_Student_Pelka" FromRole="Student_Pelka" ToRole="Ocjena_Pelka" />
+    <NavigationProperty Name="UpisStudenataNaPredmet_Pelka" Relationship="Praksa_Nov_2019Model.FK_UpisStudenataNaPredmet_Pelka_Student_Pelka1" FromRole="Student_Pelka" ToRole="UpisStudenataNaPredmet_Pelka" />
   </EntityType>
   <EntityContainer Name="Praksa_Nov_2019Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Student_Pelka" EntityType="Self.Student_Pelka" />
@@ -73,6 +75,16 @@
       <Parameter Name="IDProfesora" Mode="In" Type="Int32" />
       <Parameter Name="Asistenta" Mode="In" Type="Int32" />
     </FunctionImport>
+    <EntitySet Name="Ocjena_Pelka" EntityType="Praksa_Nov_2019Model.Ocjena_Pelka" />
+    <EntitySet Name="UpisStudenataNaPredmet_Pelka" EntityType="Praksa_Nov_2019Model.UpisStudenataNaPredmet_Pelka" />
+    <AssociationSet Name="FK_Ocjena_Pelka_Student_Pelka" Association="Praksa_Nov_2019Model.FK_Ocjena_Pelka_Student_Pelka">
+      <End Role="Student_Pelka" EntitySet="Student_Pelka" />
+      <End Role="Ocjena_Pelka" EntitySet="Ocjena_Pelka" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UpisStudenataNaPredmet_Pelka_Student_Pelka1" Association="Praksa_Nov_2019Model.FK_UpisStudenataNaPredmet_Pelka_Student_Pelka1">
+      <End Role="Student_Pelka" EntitySet="Student_Pelka" />
+      <End Role="UpisStudenataNaPredmet_Pelka" EntitySet="UpisStudenataNaPredmet_Pelka" />
+    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="InsertZaduzenjaSaTryCatchNata_Result">
     <Property Type="String" Name="Naziv" Nullable="false" MaxLength="100" />
@@ -91,4 +103,46 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
+  <EntityType Name="Ocjena_Pelka">
+    <Key>
+      <PropertyRef Name="ID_studenta" />
+    </Key>
+    <Property Name="ID_studenta" Type="Int32" Nullable="false" />
+    <Property Name="ID_ispitnaObaveza" Type="Int32" Nullable="false" />
+    <Property Name="Ocjena" Type="Int32" />
+    <NavigationProperty Name="Student_Pelka" Relationship="Praksa_Nov_2019Model.FK_Ocjena_Pelka_Student_Pelka" FromRole="Ocjena_Pelka" ToRole="Student_Pelka" />
+  </EntityType>
+  <EntityType Name="UpisStudenataNaPredmet_Pelka">
+    <Key>
+      <PropertyRef Name="ID_studenta" />
+    </Key>
+    <Property Name="ID_studenta" Type="Int32" Nullable="false" />
+    <Property Name="ID_predavanja" Type="Int32" Nullable="false" />
+    <Property Name="Ocjena" Type="Int32" />
+    <NavigationProperty Name="Student_Pelka" Relationship="Praksa_Nov_2019Model.FK_UpisStudenataNaPredmet_Pelka_Student_Pelka1" FromRole="UpisStudenataNaPredmet_Pelka" ToRole="Student_Pelka" />
+  </EntityType>
+  <Association Name="FK_Ocjena_Pelka_Student_Pelka">
+    <End Type="Praksa_Nov_2019Model.Student_Pelka" Role="Student_Pelka" Multiplicity="1" />
+    <End Type="Praksa_Nov_2019Model.Ocjena_Pelka" Role="Ocjena_Pelka" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Student_Pelka">
+        <PropertyRef Name="ID_studenta" />
+      </Principal>
+      <Dependent Role="Ocjena_Pelka">
+        <PropertyRef Name="ID_studenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UpisStudenataNaPredmet_Pelka_Student_Pelka1">
+    <End Type="Praksa_Nov_2019Model.Student_Pelka" Role="Student_Pelka" Multiplicity="1" />
+    <End Type="Praksa_Nov_2019Model.UpisStudenataNaPredmet_Pelka" Role="UpisStudenataNaPredmet_Pelka" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Student_Pelka">
+        <PropertyRef Name="ID_studenta" />
+      </Principal>
+      <Dependent Role="UpisStudenataNaPredmet_Pelka">
+        <PropertyRef Name="ID_studenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -52,5 +52,23 @@
     <FunctionImportMapping FunctionImportName="UnosProfesora_Dragana" FunctionName="Praksa_Nov_2019Model.Store.UnosProfesora_Dragana" />
     <FunctionImportMapping FunctionImportName="UnosProfesora_Dragana_try_catch" FunctionName="Praksa_Nov_2019Model.Store.UnosProfesora_Dragana_try_catch" />
     <FunctionImportMapping FunctionImportName="ZaduzenjeProfesoraProcedura" FunctionName="Praksa_Nov_2019Model.Store.ZaduzenjeProfesoraProcedura" />
+    <EntitySetMapping Name="Ocjena_Pelka">
+      <EntityTypeMapping TypeName="Praksa_Nov_2019Model.Ocjena_Pelka">
+        <MappingFragment StoreEntitySet="Ocjena_Pelka">
+          <ScalarProperty Name="Ocjena" ColumnName="Ocjena" />
+          <ScalarProperty Name="ID_ispitnaObaveza" ColumnName="ID_ispitnaObaveza" />
+          <ScalarProperty Name="ID_studenta" ColumnName="ID_studenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UpisStudenataNaPredmet_Pelka">
+      <EntityTypeMapping TypeName="Praksa_Nov_2019Model.UpisStudenataNaPredmet_Pelka">
+        <MappingFragment StoreEntitySet="UpisStudenataNaPredmet_Pelka">
+          <ScalarProperty Name="Ocjena" ColumnName="Ocjena" />
+          <ScalarProperty Name="ID_predavanja" ColumnName="ID_predavanja" />
+          <ScalarProperty Name="ID_studenta" ColumnName="ID_studenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
