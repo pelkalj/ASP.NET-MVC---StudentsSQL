@@ -5,34 +5,34 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>List of Students</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<h2 style="color:dimgray">Spisak studenata</h2> 
 <p>
     @using (Html.BeginForm())
     {
-        <b>Search By: </b>
-        @Html.RadioButton("search by", "Name") <text>Name</text><br />
-        @Html.TextBox("search") <input type="submit" value="Search" />
+        <b>Pretrazi po: </b>
+        @Html.RadioButton("search by", "Name") <text>Imenu</text><br />
+        @Html.TextBox("search") <input type="submit" value="Pretrazi" />
     }
 </p>
+<p>
+    @Html.ActionLink("Novi student", "Create")
+</p>
+
     <table class="table">
-        <tr>
-            <th>
+        <tr style="background-color:dimgray">
+            <th style="color:white">
                 @Html.DisplayNameFor(model => model.Ime)
             </th>
-            <th>
+            <th style="color:white">
                 @Html.DisplayNameFor(model => model.Prezime)
             </th>
-            <th>
+            <th style="color:white">
                 @Html.DisplayNameFor(model => model.Adresa)
             </th>
-            <th>
+            <th style="color:white">
                 @Html.DisplayNameFor(model => model.Telefon)
             </th>
-            <th>
+            <th style="color:white">
                 @Html.DisplayNameFor(model => model.Datum_rodjenja)
             </th>
 
@@ -59,9 +59,9 @@
                 </td>
 
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID_studenta }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ID_studenta }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID_studenta })
+                    @Html.ActionLink("Izmjeni podatke", "Edit", new { id = item.ID_studenta }) |
+                    @Html.ActionLink("Detalji", "Details", new { id = item.ID_studenta }) |
+                    @Html.ActionLink("Izbrisi", "Delete", new { id = item.ID_studenta })
                 </td>
             </tr>
         }
