@@ -11,7 +11,9 @@ namespace Students.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel;
+
     public partial class Student_Pelka
     {
         public int ID_studenta { get; set; }
@@ -19,7 +21,10 @@ namespace Students.Models
         public string Prezime { get; set; }
         public string Adresa { get; set; }
         public string Telefon { get; set; }
-        public System.DateTime Datum_rodjenja { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime Datum_rodjenja { get; set; }
     
         public virtual Ocjena_Pelka Ocjena_Pelka { get; set; }
         public virtual UpisStudenataNaPredmet_Pelka UpisStudenataNaPredmet_Pelka { get; set; }

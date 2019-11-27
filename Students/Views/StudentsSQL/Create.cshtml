@@ -7,12 +7,14 @@
 
 <h2>Unos novog studenta</h2>
 
-@using (Html.BeginForm()) 
+
+
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-       
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -58,17 +60,60 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Datum_rodjenja, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Datum_rodjenja, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.Datum_rodjenja, "{0:MM/dd/yyyy}", new { @class = "form-control datitimemmsd" })
                 @Html.ValidationMessageFor(model => model.Datum_rodjenja, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Sacuvaj" class="btn btn-default" />
+                <input id="sacuvajStudenta" type="button" value="Sacuvaj" class="btn btn-default" />
             </div>
         </div>
     </div>
+}
+
+@section Scripts
+{
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.12.1.custom/jquery-ui.js")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () { // will trigger when the document is ready
+            $('.datitimemmsd').datepicker(
+                {
+                    changeMonth: true,
+                    changeYear: true,
+                    setDate: new Date()
+                }
+            ); //Initialise any date pickers
+
+
+
+            $("#sacuvajStudenta").on("click", function () {
+                debugger
+                $.ajax({
+                    url: "/StudentsSQL/Create",
+                    type: "POST",
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: "json",
+                    data: JSON.stringify({
+                        Datum_rodjenja: $("#Datum_rodjenja").val(), ID_studenta: $("#ID_studenta").val(), Ime: $("#Ime").val(),
+                        Prezime: $("#Prezime").val(), Adresa: $("#Adresa").val(), Telefon: $("#Telefon").val(),
+                    }),
+                    success: function (data) {
+                    window.location.href =  '@Url.Action("Index", "StudentsSQL")'
+                        console.log("Zavrsen poziv")
+                    },
+                    error: function () {
+                        alert("error");
+                    }
+                });
+
+            })
+
+        });
+
+
+    </script>
 }
 
 <div>

@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using Students.Models;
 using System.Data.Entity;
-
+using System.Globalization;
 
 namespace Students.Controllers
 {
@@ -50,18 +50,24 @@ namespace Students.Controllers
         }
 
         [HttpPost]
-
-        public ActionResult Create ([Bind(Include = "ID studenta, Ime, Prezime, Adresa, Telefon, DatumRodjenja")] Student_Pelka student)
+        [AllowAnonymous]
+        public JsonResult Create (Student_PelkaMODEL student)
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            // {
+            var model = new Student_Pelka();
+            model.Adresa = student.Adresa;
+            model.Datum_rodjenja = DateTime.ParseExact(student.Datum_rodjenja, "MM/dd/yyyy", CultureInfo.InvariantCulture);
+            model.Ime = student.Ime;
+            model.Prezime = student.Prezime;
+            model.Telefon = student.Telefon;
+            model.ID_studenta = student.ID_studenta;
 
-                db.Student_Pelka.Add(student);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+             db.Student_Pelka.Add(model);
+             db.SaveChanges();
+            return Json("OK");
 
-            }
-            return View(student);
+          
 
         }
 

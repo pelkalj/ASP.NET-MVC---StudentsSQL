@@ -5,20 +5,45 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2 style="color:dimgray">Spisak studenata</h2> 
-<p>
-    @using (Html.BeginForm())
-    {
-        <b>Pretrazi po: </b>
-        @Html.RadioButton("search by", "Name") <text>Imenu</text><br />
-        @Html.TextBox("search") <input type="submit" value="Pretrazi" />
-    }
-</p>
-<p>
-    @Html.ActionLink("Novi student", "Create")
-</p>
+<h2 style="color:dimgray">Spisak studenata</h2>
+<div class="form-group">
+    <p>
+        @using (Html.BeginForm())
+        {
+            <b>Pretrazi po: </b>
+            @Html.RadioButton("search by", "Name") <text>Imenu</text><br />
+            @Html.TextBox("search") <input type="submit" value="Pretrazi" />
+        }
+    </p>
+</div>
+    <p>
+        @Html.ActionLink("Novi student", "Create" , null, new { @class = "btn btn-warning" })
+    </p>
+    <style>
+        table, th, td {
+            border-collapse: collapse;
+        }
 
-    <table class="table">
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        table#t01 tr:nth-child(even) {
+            background-color: #fff;
+        }
+
+        table#t01 tr:nth-child(odd) {
+            background-color: #F7FBFC;
+        }
+
+        table#t01 th {
+            background-color: #6BC0D5;
+            color: white;
+        }
+    </style>
+
+    <table class="table" id="t01">
         <tr style="background-color:dimgray">
             <th style="color:white">
                 @Html.DisplayNameFor(model => model.Ime)
@@ -59,9 +84,9 @@
                 </td>
 
                 <td>
-                    @Html.ActionLink("Izmjeni podatke", "Edit", new { id = item.ID_studenta }) |
-                    @Html.ActionLink("Detalji", "Details", new { id = item.ID_studenta }) |
-                    @Html.ActionLink("Izbrisi", "Delete", new { id = item.ID_studenta })
+                    @Html.ActionLink("Izmjeni podatke", "Edit", new { id = item.ID_studenta }, new { @class = "btn btn-info btn-xs" }) |
+                    @Html.ActionLink("Detalji", "Details", new { id = item.ID_studenta }, new { @class = "btn btn-info btn-xs" }) |
+                    @Html.ActionLink("Izbrisi", "Delete", new { id = item.ID_studenta }, new { @class = "btn btn-info btn-xs" })
                 </td>
             </tr>
         }
